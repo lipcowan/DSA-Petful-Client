@@ -1,11 +1,24 @@
-// import React, { Component } from 'react'
-// import Cats from './components/Cats/Cats'
-// import Dogs from './components/Dogs/Dogs'
+import React, { Component } from 'react'
+import Cats from '../../components/Cats/Cats'
+import Dogs from '../../components/Dogs/Dogs'
 
-// export default class AdoptionPage extends Component{
+export default class AdoptionPage extends Component{
 
-// }
-
+    render() {
+        return (
+            <div className="availablePets">
+                <div className="item">
+                    <Cats/>
+                    Cat Here
+                </div>
+                <div className="item">
+                    <Dogs/>
+                    Dog Here
+                </div>
+            </div>
+        )
+    }
+}
 
 //Can see pets for adoption FIRST ONES AVAILABLE(cat/dog)
 //timer of 5 seconds dequeue and enqueue

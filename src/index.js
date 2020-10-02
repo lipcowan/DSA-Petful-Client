@@ -1,5 +1,4 @@
 import './index.css'
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/App/App'
@@ -9,4 +8,4 @@ ReactDOM.render(
     <PetfulProvider>
         <App />
     </PetfulProvider>, 
-    document.getElementById('root'))
+    document.getElementById('root'));

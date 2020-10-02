@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
-// import AdoptionPage from '../../routes/AdoptionPage/AdoptionPage'
+import AdoptionPage from '../../routes/AdoptionPage/AdoptionPage'
 import LandingPage from '../../routes/LandingPage/LandingPage'
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
         <main>
           <BrowserRouter>
             <Route exact path='/' component={LandingPage}/>
-            {/* <Route exact path="/adoption" component={AdoptionPage}/> */}
+            <Route exact path="/adoption" component={AdoptionPage}/>
           </BrowserRouter>
         </main>
       </div>   
