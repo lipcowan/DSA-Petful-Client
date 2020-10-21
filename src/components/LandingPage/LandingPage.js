@@ -7,8 +7,8 @@ class LandingPageComp extends Component {
         return (
             <div className="Landing_Page">
                 <div className="Landing_Page_Photo_Container">
-                    <img src='src/components/LandingPage/landingPageCat.jpg' alt='cat peeking around door'/>
-                    <img src='src/components/LandingPage/landingPageDog.jpg' alt='dog smiling'/>
+                    <img src='https://github.com/lipcowan/DSA-Petful-Client/blob/main/src/components/LandingPage/landingPageCat.jpg?raw=true' alt='cat peeking around door'/>
+                    <img src='https://github.com/lipcowan/DSA-Petful-Client/blob/main/src/components/LandingPage/landingPageDog.jpg?raw=true' alt='dog smiling'/>
                 </div>
                 <div className="Landing_Page_Summary">
                     <h3>Rehoming Pets is what we're here for</h3>
