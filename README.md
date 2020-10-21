@@ -14,5 +14,5 @@ Bootstrapped using React
 
 ---
 ### This app is brought to you by:
-Hannah Hart
-Phillip Cowan
+* Hannah Hart
+* Phillip Cowan
