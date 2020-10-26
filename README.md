@@ -1,6 +1,11 @@
 # Petful Client
 ---
-## Petful Link
+## Petful Links
+
+* [Hosted Live on Vercel](...)
+* [Client Repo](https://github.com/lipcowan/DSA-Petful-Client)
+* [Server Repo](https://github.com/lipcowan/DSA-Petful-Server)
+
 ---
 ## Summary
 Petful is a web application that let's users adopt a new pet. The user will see the pets currently up for adoption on the adoption page and the other users in queue. Once the user is in queue they'll be able to adopt the cat or dog currently available. If they decide to adopt a pet they will then receive a confirmation banner to alert them the adoption process has been initiated.
