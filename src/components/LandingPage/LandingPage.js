@@ -18,7 +18,7 @@ class Landed extends Component {
                                 selected you pet you'll receive a confirmation alert - we'll follow-up with
                                 the next steps later.
                             </p>
-                            <Link to="/adoption">I'm ready to adopt!</Link>
+                            <Link to="/adopt">I'm ready to adopt!</Link>
                         </div>
                     <img src='https://github.com/lipcowan/DSA-Petful-Client/blob/main/src/components/LandingPage/landingPageDog.jpg?raw=true' alt='dog smiling'/>
                 </div>

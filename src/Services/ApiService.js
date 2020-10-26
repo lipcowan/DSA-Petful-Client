@@ -4,7 +4,7 @@ const ApiService = {
 
     
     adoptPet(pet) {
-        fetch(`${config.REACT_APP_API_BASE}/pets`, {
+        fetch(`${config.API_ENDPOINT}/pets`, {
             method: 'DELETE',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify({pet: pet})
@@ -19,10 +19,10 @@ const ApiService = {
 
 
     addPerson(name) {
-        return fetch(`${config.REACT_APP_API_BASE}/people`, {
+        return fetch(`${config.API_ENDPOINT}/people`, {
             method: 'POST',
             headers: {'content-type': 'application/json'},
-            body: JSON.stringify(name)
+            body: JSON.stringify({name})
         }).then(res => {
             if(!res){
                 throw new Error('Whoops! Something went wrong... try again?')
@@ -33,7 +33,7 @@ const ApiService = {
     },
 
     dropPerson() {
-        return fetch(`${config.REACT_APP_API_BASE}/people`, {
+        return fetch(`${config.API_ENDPOINT}/people`, {
             method: 'DELETE',
             headers: {'content-type': 'application/json'}
         })

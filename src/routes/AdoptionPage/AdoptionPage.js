@@ -6,6 +6,7 @@ import AdoptPetBtn from '../../components/AdoptPetBtn/AdoptPetBtn'
 import YourNewPet from '../../components/YourNewPet/YourNewPet'
 import ApiService from '../../Services/ApiService'
 import config from '../../config'
+import './AdoptionPage.css'
 
 export default class AdoptionPage extends Component{
     state={
@@ -15,10 +16,7 @@ export default class AdoptionPage extends Component{
         adopted: ''
     }
 
-    componentDidMount = () => {
-        this.getAdopters();
-        this.getPets();
-    }
+    
 
     handleNameChange = (e) => {
         this.setState({
@@ -28,19 +26,32 @@ export default class AdoptionPage extends Component{
 
     handleNameSubmit = (e) => {
         e.preventDefault()
-        ApiService.addPerson(this.state.name)
-        .then(res => {
-            window.localStorage.setItem('petful_username', res)
-            this.setState({
-                adopters: [...this.state.adopters, res],
-                name: ''
-            })
+       fetch(`${config.API_ENDPOINT}/people`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({ name: this.state.name })
+    })
+      .then(res => res.json())
+      .then(resJson => {
+        window.localStorage.setItem('petful_username', resJson)
+        console.log(window.localStorage.getItem('petful_username'));
+        this.setState({
+          adopters: [...this.state.adopters, resJson],
+          name: ''
         })
-        ApiService.dropPerson()
+      })
+        this.processAdoptions()
+    }
+
+    componentDidMount = () => {
+        this.getAdopters();
+        this.getPets();
     }
 
     getAdopters = () => {
-        fetch(`${config.REACT_APP_API_BASE}/people`)
+        fetch(`${config.API_ENDPOINT}/people`)
         .then(res => {
             return res.json();
           }).then(resJson => {
@@ -48,11 +59,11 @@ export default class AdoptionPage extends Component{
               adopters: resJson
             })
           })
-        console.log(this.state.adopters)
+        
     }
 
     getPets = () => {
-        fetch(`${config.REACT_APP_API_BASE}/pets`)
+        fetch(`${config.API_ENDPOINT}/pets`)
           .then(res => {
             return res.json();
           }).then(resJson => {
@@ -139,24 +150,22 @@ export default class AdoptionPage extends Component{
         const {adopters, pets, adopted} = this.state
         return (
             <div className="adoptionPageContainer">
-                <div className="availablePetsContainer">
-                    <Pets pets={pets} />
-                    {window.localStorage.getItem('petful_username') === this.state.adopters[0]
-                        && <AdoptPetBtn
-                            adoptCat={this.adoptCat}
-                            adoptDog={this.adoptDog}
-                        />}
-                </div>
-                <div className="signupContainer">
+                <div className="adopterListContainer">
+                    <Adopters adopters={adopters}/>
                     <Signup name={this.state.name} handleSubmit={this.handleNameSubmit} handleChange={this.handleNameChange}/>
                     {adopted
                         && <YourNewPet
                             petType={adopted}
                             handleClose={this.closeConfirmation}
                         />}
+                    {window.localStorage.getItem('petful_username') === this.state.adopters[0]
+                    && <AdoptPetBtn
+                        adoptCat={this.adoptCat}
+                        adoptDog={this.adoptDog}
+                    />}
                 </div>
-                <div className="adopterListContainer">
-                    <Adopters adopters={adopters}/>
+                <div className="availablePetsContainer">
+                    <Pets pets={pets} />
                 </div>
             </div>
             

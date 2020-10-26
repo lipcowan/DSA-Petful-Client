@@ -1,0 +1,15 @@
+.adoptionPageContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.adopterListContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    border-bottom: 2px solid gray;
+    width: auto;
+}

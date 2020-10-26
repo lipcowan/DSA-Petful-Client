@@ -24,15 +24,17 @@ export default class Pets extends React.Component {
 
 
     petData = (pet) => {
-    return  <div className='pet-container'>
-                <h3>{pet.name}</h3>
+    return <div className='pet-container'>
+             <h3>{pet.name}</h3>
+            <img src={pet.imageURL} alt={pet.description} />
+            <div className="pet-stats">
                 <p>Age: {pet.age}</p>
                 <p>Gender: {pet.gender}</p>
                 <p>Breed: {pet.breed}</p>
-                <img src={pet.imageURL} alt={pet.description} />
                 <p>Description: {pet.description}</p>
                 <p>Why they are here: {pet.story}</p>
-            </div>
+            </div>    
+        </div>
     }
 
     render() {

@@ -2,6 +2,11 @@
 .signup-form input,
 .signup-form button { 
   display: block;
+  text-align: center;
   margin: 10px auto;
   max-width: 320px;
+}
+
+.signup-form label {
+  font-size: large;
 }

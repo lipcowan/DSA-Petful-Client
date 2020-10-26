@@ -1,5 +1,6 @@
-const REACT_APP_API_BASE= 'http://localhost:8080'
-export default REACT_APP_API_BASE
+export default {
+    API_ENDPOINT: 'http://localhost:8000',
+}
 
-// 'https://petful-server-hp.herokuapp.com/api'
+// 'https://petful-server-hp.herokuapp.com'
 

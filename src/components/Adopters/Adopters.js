@@ -17,6 +17,7 @@ export default class Adopters extends React.Component {
   render() {
     return (
       <div className="Adopters">
+        <h3>Adoption Line</h3>
         {this.displayAdopters()}
       </div>
     );

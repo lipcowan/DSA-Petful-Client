@@ -1,8 +1,24 @@
 .pet-container {
     margin: 25px auto 20px auto;
-    border-bottom: 2px solid gray;
   }
+
+.pet-container h3 {
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: larger;
+} 
   
   .pet-container img {
+    display: block;
+    margin: 5px auto;
     max-width: 100%;
+    border-radius: 100%;
+  }
+
+  .pet-stats {
+    text-indent: 30%;
+    margin: 5px auto;
+    max-width: 100%;
+    font-size: large;
+    border-bottom: 2px solid gray;
   }
