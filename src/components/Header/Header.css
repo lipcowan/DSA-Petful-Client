@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+}
+
+.Header_Container img {
+    padding-top: 5px;
+    display: block;
+    margin: 5px auto;
+    max-width: 100%;
+}
+
+.Header_Container {
+    background-color: cadetblue;
+    max-width: 750px;
+    margin: 0 auto;
+    padding-bottom: 5px;
+}

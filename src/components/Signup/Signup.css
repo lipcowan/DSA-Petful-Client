@@ -1,0 +1,7 @@
+.signup-form label,
+.signup-form input,
+.signup-form button { 
+  display: block;
+  margin: 10px auto;
+  max-width: 320px;
+}

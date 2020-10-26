@@ -1,0 +1,8 @@
+.pet-container {
+    margin: 25px auto 20px auto;
+    border-bottom: 2px solid gray;
+  }
+  
+  .pet-container img {
+    max-width: 100%;
+  }

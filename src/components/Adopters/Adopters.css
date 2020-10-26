@@ -1,0 +1,9 @@
+.adopters-list {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .adopters-list-item {
+    list-style-type: none;
+    padding: 5px;
+  }
