@@ -36,7 +36,6 @@ export default class AdoptionPage extends Component{
       .then(res => res.json())
       .then(resJson => {
         window.localStorage.setItem('petful_username', resJson)
-        console.log(window.localStorage.getItem('petful_username'));
         this.setState({
           adopters: [...this.state.adopters, resJson],
           name: ''
