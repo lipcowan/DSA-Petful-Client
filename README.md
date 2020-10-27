@@ -2,7 +2,7 @@
 ---
 ## Petful Links
 
-* [Hosted Live on Vercel](...)
+* [Hosted Live on Vercel](https://dsa-petful-client-zeta.vercel.app/)
 * [Client Repo](https://github.com/lipcowan/DSA-Petful-Client)
 * [Server Repo](https://github.com/lipcowan/DSA-Petful-Server)
 
