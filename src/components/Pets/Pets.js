@@ -7,7 +7,7 @@ export default class Pets extends React.Component {
         const {cat} = this.props.pets;
         if (cat !== undefined) {
             return this.petData(cat[0])
-        }else {
+        } else {
             return 'All cats have been adopted... please comeback later'
         }
     }

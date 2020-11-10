@@ -6,7 +6,7 @@ export default class AdoptPetBtn extends React.Component {
       <div className="Adopt-Buttons">
         <button className="adopt-cat" onClick={this.props.adoptCat}>Adopt Cat</button>
         <button className="adopt-dog" onClick={this.props.adoptDog}>Adopt Dog</button>
-        {/* <button className="adopt-both" onClick={this.props.adoptBoth}>Adopt Both!</button> */}
+        <button className="adopt-both" onClick={this.props.adoptBoth}>Adopt Both!</button>
       </div>
     )
   }
